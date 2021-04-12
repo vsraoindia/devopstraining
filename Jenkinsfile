@@ -10,7 +10,7 @@ pipeline {
                    echo "This is start $(pwd)"
                    cd ./my-app
                    echo "This is my app dir $(pwd)"
-                   sh 'mvn package'
+                   mvn package
                    cd ..
                 '''
             }
