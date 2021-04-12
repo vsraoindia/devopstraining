@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
-                mvn package
+                echo 'Building using Maven ..'
+                sh 'mvn package'
             }
         }
         stage('Test') {
