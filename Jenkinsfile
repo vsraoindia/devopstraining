@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Building using Maven ..'
                 sh 'cd my-app'
+                sh 'pwd'
                 sh 'mvn package'
             }
         }
