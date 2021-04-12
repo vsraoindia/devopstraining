@@ -12,7 +12,7 @@ pipeline {
                    echo "This is my app dir $(pwd)"
                    sh 'mvn package'
                    cd ..
-                ...
+                '''
             }
         }
         stage('Test') {
