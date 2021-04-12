@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building using Maven ..'
+                sh 'cd my-app'
                 sh 'mvn package'
             }
         }
