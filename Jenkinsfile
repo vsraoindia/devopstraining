@@ -5,9 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building using Maven ..'
-                sh 'cd my-app'
-                sh 'pwd'
-                sh 'mvn package'
+                sh script:'''
+                   #!/bin/bash
+                   echo "This is start $(pwd)"
+                   cd ./my-app
+                   echo "This is my app dir $(pwd)"
+                   sh 'mvn package'
+                   cd ..
             }
         }
         stage('Test') {
